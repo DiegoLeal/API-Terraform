@@ -16,7 +16,7 @@ WORKDIR /app
 COPY --from=build /workspace/target/*.jar /app/application.jar
 
 ENV PROFILE=dev
-ENV POSTGRES_HOST=dev-db.czjiom3rtt6e.us-east-1.rds.amazonaws.com
+ENV POSTGRES_HOST=postgres@tf-db.cmxfpu2rrcpx.us-east-1.rds.amazonaws.com
 
 RUN apt-get update && apt-get install -y wget
 
