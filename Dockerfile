@@ -27,7 +27,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 RUN apt-get remove wget -y
 
-EXPOSE 9000
+EXPOSE 8080
 
 ENTRYPOINT [ "dockerize", "-wait", "tcp://db-postgres:5432", "-timeout", "40s"]
 
